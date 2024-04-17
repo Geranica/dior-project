@@ -1,0 +1,4 @@
+@function fromPxToPercentage($valueInPx, $maxWidthOfContainer: 1200) {
+  $value: calc($valueInPx * 100% / $maxWidthOfContainer);
+  @return $value;
+}

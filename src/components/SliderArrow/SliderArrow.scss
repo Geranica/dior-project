@@ -1,0 +1,18 @@
+.slider-arrow {
+   width: 51px;
+   height: 16px;
+   cursor: pointer;
+
+   // .slider-arrow_left
+
+   &_left {
+   }
+
+   &_right {
+   }
+}
+
+.arrows-block {
+   display: flex;
+   gap: 21px;
+}

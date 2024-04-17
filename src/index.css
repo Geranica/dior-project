@@ -94,3 +94,8 @@ body {
   font-family: var(--main-font);
   color: var(--black);
 }
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}

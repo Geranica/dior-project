@@ -1,8 +1,9 @@
 import { useState } from "react";
 import sprite from "../../icons/sprite.svg";
+import MenuButton from "../MenuButton/MenuButton";
+import { useEffect } from "react";
+import stopAnimationOnWindowResize from "../../utils/stopAnimationOnWindowResize";
 import "./Header.scss";
-import { Typography } from "@mui/material";
-import { Button } from "@mui/material";
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
@@ -10,6 +11,13 @@ const Header = () => {
   const toggleBurger = () => {
     setBurger((current) => !current);
   };
+
+  useEffect(() => {
+    const unsubscribe = stopAnimationOnWindowResize();
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   return (
     <header className="header">
@@ -65,12 +73,7 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <button onClick={toggleBurger} className="header__burger-open">
-          <svg className="header__burger-icon">
-            <use href={`${sprite}#burger-open`}></use>
-          </svg>
-        </button>
-        <Typography variant="h1">Hello world!</Typography>
+        <MenuButton onClick={toggleBurger} clicked={burger} />
       </div>
     </header>
   );

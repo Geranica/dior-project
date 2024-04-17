@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App/App";
-import "./style additions/style-variables.scss";
+import "./style_additions/style-variables.scss";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
