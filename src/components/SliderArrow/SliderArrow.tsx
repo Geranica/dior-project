@@ -19,7 +19,7 @@ const SliderArrowRight = (props: { next: () => void }) => {
 
 const SliderArrows = ({ previous, next }) => {
   return (
-    <div className="arrows-block container">
+    <div className="arrows-block">
       <SliderArrowLeft previous={previous} />
       <SliderArrowRight next={next} />
     </div>

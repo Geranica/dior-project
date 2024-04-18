@@ -1,0 +1,67 @@
+@import "../../style_additions/clamp-builder.scss";
+@import "../../style_additions/fromPxToPercentage.scss";
+.description {
+  // .description__container
+
+  &__container {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1230px;
+    padding: clampBuilder(40, 150) 15px clampBuilder(30, 150) clampBuilder(15, 203);
+    display: flex;
+    gap: 0px clampBuilder(10, 223);
+    @media (max-width: 712px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  // .description__first-text
+
+  &__first-text {
+    flex: 1 0 fromPxToPercentage(387, 997);
+    display: flex;
+    flex-direction: column;
+    gap: clampBuilder(10, 20) 0px;
+  }
+
+  // .description__title
+
+  &__title {
+    line-height: 1.3;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: clampBuilder(24, 32);
+    color: var(--black);
+    width: 199px;
+  }
+
+  // .description__first-text-block
+
+  &__first-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: clampBuilder(13, 24) 0px;
+  }
+
+  // .description__second-text
+
+  &__second-text {
+    padding-top: clampBuilder(100, 214);
+    flex: 1 0 fromPxToPercentage(387, 997);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: clampBuilder(13, 14);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    gap: clampBuilder(13, 24) 0px;
+    p {
+      line-height: 1.2;
+    }
+    @media (max-width: 712px) {
+      padding: 0;
+    }
+  }
+}

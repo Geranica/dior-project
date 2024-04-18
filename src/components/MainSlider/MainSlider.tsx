@@ -25,6 +25,7 @@ const MainSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    adaptiveHeight: true
   };
   return (
     <section className="main-slider">

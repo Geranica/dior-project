@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "../Header/Header";
 import MainSlider from "../MainSlider/MainSlider";
+import Description from "../Description/Description";
+import ImageSlider from "../ImageSlider/ImageSlider";
 
 import "./App.scss";
 
@@ -11,6 +13,8 @@ function App() {
         <Header />
         <main className="page">
           <MainSlider />
+          <Description/>
+          <ImageSlider/>
         </main>
         <footer className="footer"></footer>
       </div>
