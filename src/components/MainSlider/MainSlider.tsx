@@ -25,7 +25,7 @@ const MainSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    adaptiveHeight: true
+    adaptiveHeight: true,
   };
   return (
     <section className="main-slider">
@@ -77,7 +77,11 @@ const MainSlider = () => {
             </div>
           </div>
         </Slider>
-        <SliderArrows next={next} previous={previous} />
+        <SliderArrows
+          className="container"
+          next={next}
+          previous={previous}
+        />
       </div>
     </section>
   );

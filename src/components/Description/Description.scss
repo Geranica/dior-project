@@ -4,11 +4,10 @@
   // .description__container
 
   &__container {
-    flex-wrap: wrap;
     margin: 0 auto;
     width: 100%;
     max-width: 1230px;
-    padding: clampBuilder(40, 150) 15px clampBuilder(30, 150) clampBuilder(15, 203);
+    padding: clampBuilder(40, 150) 15px clampBuilder(30, 150) clampBuilder(0, 219);
     display: flex;
     gap: 0px clampBuilder(10, 223);
     @media (max-width: 712px) {
