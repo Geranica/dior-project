@@ -6,7 +6,7 @@
   &__container {
     display: flex;
     gap: 40px clampBuilder(15, 107);
-    @media (max-width: 551px) {
+    @media (max-width: 1614px) {
       flex-direction: column;
     }
   }

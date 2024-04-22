@@ -33,6 +33,21 @@
    <symbol id='arrow-down' viewBox="0 0 16 51" fill="none">
       <path d="M7.29289 50.7071C7.68342 51.0976 8.31658 51.0976 8.70711 50.7071L15.0711 44.3431C15.4616 43.9526 15.4616 43.3195 15.0711 42.9289C14.6805 42.5384 14.0474 42.5384 13.6569 42.9289L8 48.5858L2.34315 42.9289C1.95262 42.5384 1.31946 42.5384 0.928932 42.9289C0.538408 43.3195 0.538408 43.9526 0.928932 44.3431L7.29289 50.7071ZM7 0L7 50H9L9 0L7 0Z" fill="black" />
    </symbol>
+   <symbol id='play_video' width="100" height="100" viewBox="0 0 100 100" fill="none">
+      <g filter="url(#filter0_b_12_397)">
+         <circle cx="50" cy="50" r="50" fill="white" fill-opacity="0.7" />
+         <circle cx="50" cy="50" r="49.5" stroke="white" />
+      </g>
+      <path d="M70 50L40 67.3205V32.6795L70 50Z" fill="#7449BB" />
+      <defs>
+         <filter id="filter0_b_12_397" x="-5" y="-5" width="110" height="110" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="2.5" />
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_12_397" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_12_397" result="shape" />
+         </filter>
+      </defs>
+   </symbol>
 </svg>
 
 

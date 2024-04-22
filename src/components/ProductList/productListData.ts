@@ -20,6 +20,13 @@ const productListData = [
     description: "Hair Perfume",
     price: 102,
   },
+  {
+    title: "04 ADD THE FINISHING TOUCH",
+    image: "src/assets/ProductList/product-3.jpg",
+    brand: "GRIS DIOR",
+    description: "Hair Perfume",
+    price: 110,
+  },
 ];
 
 export default productListData;
