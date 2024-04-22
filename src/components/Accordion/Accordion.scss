@@ -2,26 +2,34 @@
   // .accordion-panel__container
 
   &__container {
-    transition: all 1s ease;
   }
 
   // .accordion-panel__header
 
   &__header {
     cursor: pointer;
+    border-bottom: 1px solid black;
   }
 
   // .accordion-panel__content
 
   &__content {
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+    //max-height: 0;
+    //overflow: hidden;
+    //transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all 0.5s ease;
 
     &_active {
-      height: auto;
-      max-height: 9999px;
-      transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+      grid-template-rows: 1fr;
+      transition: all 0.5s ease;
+      overflow: auto;
+      
+      //height: auto;
+      //max-height: 9999px;
+      //transition: all 0.5s cubic-bezier(1, 0, 1, 0);
     }
   }
 }

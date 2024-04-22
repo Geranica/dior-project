@@ -9,74 +9,57 @@
   // .collapse__container
 
   &__container {
-    .rc-collapse {
-      background-color: white;
-      border: none;
-      .rc-collapse-item {
-         transition: all 0.3s ease;
-         .rc-collapse-item-active{
-            transition: all 0.3s ease;
-         }
-        border-bottom: 1px solid #000;
-        .rc-collapse-header {
-          padding: 0;
-          .rc-collapse-header-text {
-            width: 100%;
-          }
-        }
-        .rc-collapse-content {
-         .rc-collapse-content-active {
-            transition: all 0.3s ease;
-         }
-          padding: 0px;
-          .rc-collapse-content-box {
-          }
-        }
+  }
+
+  .collapse-label {
+    min-height: 121px;
+    display: grid;
+    grid-template-columns: 0.4fr 0.5fr 0.1fr;
+    align-items: center;
+    gap: 30px;
+
+    // .collapse-label__title
+
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 24px;
+      color: #000;
+      text-transform: uppercase;
+    }
+
+    // .collapse-label__description
+
+    &__description {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      color: #000;
+    }
+
+    // .collapse-label__arrow
+
+    &__arrow {
+      width: 16px;
+      height: 51px;
+      transition: all 0.3s ease;
+
+      &_active {
+        transform: rotate(-180deg);
+        transition: all 0.3s ease;
       }
     }
   }
-}
 
-.collapse-label {
-  min-height: 121px;
-  display: grid;
-  grid-template-columns: 0.4fr 0.5fr 0.1fr;
-  align-items: center;
-  gap: 30px;
-
-  // .collapse-label__title
-
-  &__title {
+  .collapse-content {
+    overflow: hidden;//для того, чтобы работала анимация схлопывания и открытия
     font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 24px;
-    color: #000;
-    text-transform: uppercase;
-  }
-
-  // .collapse-label__description
-
-  &__description {
-    font-family: var(--font-family);
-    font-weight: 400;
+    font-weight: 700;
     font-size: 14px;
     color: #000;
+    padding-right: 150px;
+    padding-top: 15px;
+    line-height: 1.3;
+    transition: all 0.3s ease;
   }
-
-  // .collapse-label__arrow
-
-  &__arrow {
-    width: 16px;
-    height: 51px;
-  }
-}
-
-.collapse-content {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 14px;
-  color: #000;
-  padding-right: 150px;
-  line-height: 1.3;
-  transition: all 0.3s ease;
 }

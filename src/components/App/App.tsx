@@ -4,6 +4,7 @@ import MainSlider from "../MainSlider/MainSlider";
 import Description from "../Description/Description";
 import ImageSlider from "../ImageSlider/ImageSlider";
 import Collapse from "../Collapse/Collapse";
+import ProductList from "../ProductList/ProductList";
 
 import "./App.scss";
 
@@ -17,6 +18,7 @@ function App() {
           <Description/>
           <ImageSlider/>
           <Collapse/>
+          <ProductList/>
         </main>
         <footer className="footer"></footer>
       </div>

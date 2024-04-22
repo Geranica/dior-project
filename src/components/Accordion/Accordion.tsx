@@ -2,32 +2,23 @@ import { ReactNode, useState } from "react";
 import "./Accordion.scss";
 
 interface AccordionProps {
-  items: { header: ReactNode; content: ReactNode }[];
+  items: ReactNode[];
 }
 
-const Accordion = ({ items }: AccordionProps) => {
-  const panelItems = items.map((item, index) => {
-    return (
-      <AccordionPanel key={index} header={item.header} content={item.content} />
-    );
-  });
-
+export const Accordion = ({ items }: AccordionProps) => {
   return (
     <div className="accordion">
-      <div className="accordion__container">{panelItems}</div>
+      <div className="accordion__container">{items}</div>
     </div>
   );
 };
 
-export default Accordion;
+interface AccordionPanel {
+  content: () => ReactNode;
+  header: (isOpen: boolean) => ReactNode;
+}
 
-const AccordionPanel = ({
-  header,
-  content,
-}: {
-  header: ReactNode;
-  content: ReactNode;
-}) => {
+export const AccordionPanel = ({ header, content }: AccordionPanel) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -38,7 +29,7 @@ const AccordionPanel = ({
     <div className="accordion-panel">
       <div className="accordion-panel__container">
         <div onClick={handleClick} className="accordion-panel__header">
-          {header}
+          {header(isOpen)}
         </div>
         <div
           className={
@@ -47,7 +38,7 @@ const AccordionPanel = ({
               : "accordion-panel__content"
           }
         >
-          {content}
+          {content()}
         </div>
       </div>
     </div>

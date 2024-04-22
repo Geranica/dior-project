@@ -1,0 +1,35 @@
+@import "../../style_additions/clamp-builder.scss";
+
+.product-list {
+  // .product-list__container
+
+  &__container {
+    display: flex;
+    gap: 40px clampBuilder(15, 107);
+    @media (max-width: 551px) {
+      flex-direction: column;
+    }
+  }
+
+  // .product-list__title
+
+  &__title {
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: clampBuilder(20, 32);
+    color: #000;
+    line-height: 1.34;
+  }
+
+  // .product-list__list
+
+  &__list {
+   flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 386px);
+    gap: 35px 20px;
+    @media (max-width: 1614px) {
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+  }
+}
