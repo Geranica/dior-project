@@ -6,6 +6,7 @@ import ImageSlider from "../ImageSlider/ImageSlider";
 import Collapse from "../Collapse/Collapse";
 import ProductList from "../ProductList/ProductList";
 import VideoComponent from "../VideoComponent/VideoComponent";
+import Footer from "../Footer/Footer";
 
 import "./App.scss";
 
@@ -22,7 +23,9 @@ function App() {
           <ProductList />
           <VideoComponent />
         </main>
-        <footer className="footer"></footer>
+        <footer className="footer">
+          <Footer/>
+        </footer>
       </div>
     </Router>
   );

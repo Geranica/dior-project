@@ -2,7 +2,7 @@
   $minValue,
   $maxValue,
   $minViewport: 320,
-  $maxViewport: 1200
+  $maxViewport: 1230
 ) {
   $minValuePerRem: calc($minValue / 16);
   $maxValuePerRem: calc($maxValue / 16);
